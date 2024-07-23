@@ -17,70 +17,60 @@
 3. **Backend Setup**: Initialized Node.js project with Express and connected to MongoDB (Atlas).
 
 ### Database Schema Design
+
+
 **Products Schema (MongoDB)**
-```json
-{
-  "_id": "ObjectId",
-  "name": "String",
-  "description": "String",
-  "price": "Number",
-  "categoryId": "ObjectId",
-  "stock": "Number",
-  "imageUrl": "String"
-}
+
+- `_id` : ObjectId
+- `name`: String
+- `description`: String
+- `price`: Number
+- `category`: String
+- `stock`: Number
+- `imageUrl`: String
 
 **Users Schema (MongoDB)**
-{
-  "_id": "ObjectId",
-  "username": "String",
-  "password": "String",
-  "email": "String"
-}
 
-**Categories Schema (MongoDB)**
-{
-  "_id": "ObjectId",
-  "name": "String",
-  "description": "String"
-}
+- `_id` : ObjectId
+- `username`: String
+- `password`: String
+- `email`: String
+
+**Category Schema (MongoDB)**
+
+- `_id` : ObjectId
+- `name` : String
+- `description` : String
 
 **Carts Schema (MongoDB)**
-{
-  "_id": "ObjectId",
-  "userId": "ObjectId",
-  "items": [
-    {
-      "productId": "ObjectId",
-      "quantity": "Number"
-    }
-  ],
-  "totalAmount": "Number"
-}
+
+- `_id` : ObjectId
+- `userId` : ObjectId
+- `productId` : ObjectId
+- `quantity`: Number
+- `totalAmount` : Number
 
 **Reviews Schema (MongoDB)**
 {
-  "_id": "ObjectId",
-  "productId": "ObjectId",
-  "userId": "ObjectId",
-  "rating": "Number",
-  "comment": "String",
-  "date": "Date"
+- `_id` : ObjectId
+- `productId` : ObjectId
+- `userId` : ObjectId
+- `rating` : Number
+- `comment`: String
+- `date` : Date
 }
 
+
 **Orders Schema (MongoDB)**
-{
-  "_id": "ObjectId",
-  "userId": "ObjectId",
-  "products": [
-    {
-      "productId": "ObjectId",
-      "quantity": "Number"
-    }
-  ],
-  "totalAmount": "Number",
-  "status": "String",
-  "orderDate": "Date"
-}
+
+- `_id` : ObjectId
+- `userId` : ObjectId
+- `productId` : ObjectId
+- `quantity`: Number
+- `totalAmount` : Number
+- `status` : String
+- `orderDate` : Date
+
 ### Frontend Setup
 
 1. Basic structure set up for React components, including directories for components and services.
